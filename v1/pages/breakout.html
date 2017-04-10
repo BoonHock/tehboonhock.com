@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Breakout</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../CSS/main-css.css">
+		<link rel="stylesheet" href="../CSS/breakout.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<style>
+			@media only screen and (max-width : 768px){
+				.breakout-game{
+					display: none;
+				}
+			}
+			@media only screen and (min-width : 768px){
+				.lead{
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<a href="home.html"><img src="../images/fun-tehboonhock.png" class="center-block img-responsive" alt="logo"></a>
+		</div>
+		<nav class="navbar navbar-inverse container-fluid" data-offset-top="197" >
+			<!-- story titles collapsed navbar -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span> 
+				</button>
+			</div>
+			<!-- end story titles collapsed navbar -->
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav" id="main-nav">
+					<li><a href="home.html"><span class="glyphicon glyphicon-home"></span></a></li>
+					<li><a href="primary-school.html">Primary school</a></li>
+					<li><a href="high-school.html">High school</a></li>
+					<li><a href="national-service.html">National Service</a></li>
+					<li><a href="form-6.html">Form 6</a></li>
+					<li><a href="breakout.html">Breakout</a></li>
+					<li><a href="photos.html">Photos</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="../main.html">Main page <span class="glyphicon glyphicon-log-out"></span></a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container">
+			<p class="lead" style="text-align:center;">Sorry! Breakout is available for screens wider than 768px only</p>
+		</div>
+		<div class="container breakout-game" style="text-align:center">
+			<div class="row">
+				<h1>Breakout <small id="breakout-message">Click to start</small></h1>
+			</div>
+			<div class="row">
+				<canvas id="breakout-canvas" height="450" width="547"></canvas>
+			</div>
+		</div>
+		<div class="container breakout-game">
+			<div class="row">
+				<div class="col-xs-12">
+					<h3>Bugs</h3>
+					<ul>
+						<li>Optimised for medium-sized screens and larger only. I could not make it responsive. Tt kept causing coordinates error and crashed the game.</li>
+						<li>When ball hits two bricks simultaneously, there may be some odd movement.</li>
+						<li>When ball hits corners of bricks, there may be some odd movement.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="../JS/pages-start-up.js"></script>
+		<script src="../JS/breakout.js"></script>
+	</body>
+</html>

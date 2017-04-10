@@ -1,0 +1,167 @@
+<!-- start work on 14/4/2016 -->
+<!-- end work on 21/4/2016 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Teh Boon Hock</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+      html, body {
+        position: relative;
+        min-height: 100%;
+        font-family: 'Montserrat', sans-serif;
+        color: #fff;
+        font-size: 13px;
+      }
+      body {
+        background: #333; /* For browsers that do not support gradients */
+      }
+      #blackScreen {
+        text-align: left;
+        font-family: 'Press Start 2P', sans-serif;
+        line-height: 20px;
+      }
+      #blackScreen table {
+        width: 100%;
+      }
+      #blackScreen table tr{
+        height: 45px;
+      }
+      #blackScreen td:first-child{
+        width: 50%;
+      }
+      #blackScreen td:first-child + td{
+        min-width: 80px;
+      }
+      #blackScreen td.success {
+        color: green;
+      }
+      #blackScreen td.fail{
+        color: red;
+      }
+      #myName {
+        margin-top: 10px;
+        position: relative;
+      }
+      #typeCursor {
+        width: 12px;
+        height: 16px;
+        border: none;
+        display: inline-block;
+        background-color: #fff;
+        -webkit-animation: blink 1s steps(1) infinite; /* Chrome, Safari, Opera */
+       animation: blink 1s steps(1) infinite;
+      }
+      #typeCursor.typing {
+        -webkit-animation: none; /* Chrome, Safari, Opera */
+        animation: none;
+      }
+      @media screen and (max-width: 768px){
+        *{
+          font-size: 8px;
+        }
+        #typeCursor {
+          width: 8px;
+          height: 12px;
+        }
+      }
+      @-webkit-keyframes blink {
+        0%, 100%  {visibility: visible;}
+        50% {visibility: hidden;}
+      }
+      @keyframes blink {
+        0%, 100%  {visibility: visible;}
+        50% {visibility: hidden;}
+      }
+    </style>
+	</head>
+  <body>
+    <div class="container-fluid" id="blackScreen">
+      <div class="row">
+        <div class="col-xs-12">
+          <p id="myName">http://www.tehboonhock.com/><span class="enterHere"></span><span id="typeCursor"></span></p>
+          <p class="hidden" id="starting">Starting...</p>
+          <table class="hidden">
+            <tbody>
+              <tr>
+                <td>Checking internet connection</td>
+                <td class="success"> - ok</td>
+              </tr>
+              <tr>
+                <td>Waiting response from http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css</td>
+                <td class="success"> - ok</td>
+              </tr>
+              <tr>
+                <td>Waiting response from https://fonts.googleapis.com/css</td>
+                <td class="success"> - ok</td>
+              </tr>
+              <tr>
+                <td>Waiting response from https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js</td>
+                <td class="success"> - ok</td>
+              </tr>
+              <tr>
+                <td>Waiting response from http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js</td>
+                <td class="success"> - ok</td>
+              </tr>
+              <tr>
+                <td>Loading scripts...</td>
+                <td class="success"> - ok</td>
+              </tr>
+              <tr>
+                <td>Checking if user is not Obama</td>
+                <td class="success"> - ok</td>
+              </tr>
+              <tr>
+                <td>Checking if user is human</td>
+                <td class="fail"> - not ok</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="hidden" style="margin-top:50px;" id="continue">Press Enter to continue</p>
+        </div>
+      </div>
+    </div>
+	</body>
+  <script>
+    $(document).ready(function(){
+      var enterHere = $('#myName .enterHere');
+      var typeCursor = $('#typeCursor');
+      var tehBoonHock = ['T', 'e', 'h', ' ', 'B', 'o', 'o', 'n', ' ', 'H', 'o', 'c', 'k'];
+      var nameLength = tehBoonHock.length;
+      var namePos = 0;
+      
+      // allow the cursor to blink for 2 seconds before start typing
+      window.setTimeout(function(){
+        typeCursor.addClass('typing'); // stop cursor from blinking
+        // start typing name
+        var typeName = window.setInterval(function(){
+          enterHere.append(tehBoonHock[namePos++]);
+          // reached the end of typing
+          if (namePos === nameLength){
+            clearInterval(typeName);
+            typeCursor.removeClass('typing'); // to make cursor blink again
+            // display 'Starting...'
+            window.setTimeout(function(){
+              typeCursor.appendTo($('#starting').removeClass('hidden'));
+              window.setTimeout(function(){
+                $('#blackScreen table').add($('#continue')).removeClass('hidden');
+                typeCursor.appendTo($('#continue'));
+                $(window).on('keypress click', function(e){
+                  console.log(e.which);
+                  if (e.which === 13 || e.which === 1){
+                    window.location.assign('v2/home.html');
+                  }
+                })
+              },1000);
+            }, 1000);
+          }
+        }, 100);
+      },2000);
+    });
+  </script>
+</html>

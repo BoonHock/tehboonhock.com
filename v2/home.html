@@ -1,0 +1,136 @@
+<!-- star work on 14/4/2016 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa|Lobster|Montserrat' rel='stylesheet' type='text/css'>
+    <link href="css/general.css" rel="stylesheet">
+    <style>
+      html, body {
+        position: relative;
+        min-height: 100%;
+        font-family: 'Montserrat', sans-serif;
+      }
+      body {
+        background: #54d1e2; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(#54d1e2, #39c654); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#54d1e2, #39c654); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#54d1e2, #39c654); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#54d1e2, #39c654); /* Standard syntax */
+        background-repeat: no-repeat;
+      }
+      #myImg img {
+        max-width: 200px;
+        max-height: 200px;
+      }
+      #myName {
+        font-family: 'Comfortaa', sans-serif;
+        font-size: 3em;
+        text-align: center;
+        font-weight: 600;
+        margin-top: 10px;
+        position: relative;
+        transition: 2s;
+      }
+      .slideFromBottom > .row {
+        margin-top: 10px;
+      }
+      @media screen and (max-width: 992px){
+        #myName, #myName.after {
+          font-size: 2em;
+        }
+      }
+    </style>
+	</head>
+  <body>
+    <div class="container-fluid">
+      <div class="row headerImg hidden-xs">
+        <div class="col-xs-12">
+          <div class="pull-left">
+            <img class="img-circle" src="../images/sperm.jpg">
+            <span class="glyphicon glyphicon-triangle-right secondImg"></span>
+            <img class="img-circle" src="../images/tbh4.jpg">
+            <span class="glyphicon glyphicon-triangle-right secondImg"></span>
+            <img class="img-circle" src="../images/tbh-primary.jpg">
+            <span class="glyphicon glyphicon-triangle-right thirdImg"></span>
+            <img class="img-circle" src="../images/tbh1.jpg">
+          </div>
+          <div class="pull-right">
+            <p id="since">Growing bigger since 1993!</p>
+          </div>
+        </div>
+      </div>
+      <div class="mainNavCover">
+        <nav class="navbar mainNav" data-spy="affix" data-offset-top="150">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="home.html">Home</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="about.html">About</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="about.html#aboutMe">About me</a></li>
+                    <li><a href="about.html#aboutWebsite">About this website</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="university.html">University</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="university.html#careerAmb">Career Ambassador</a></li>
+                    <li><a href="university.html#scholarsAtWork">Scholars@Work</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="../v1/main.html">Version 1</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="container pageContent">
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="myImg" class="slideFromTop"><img class="center-block img-circle slideBefore" src="../images/tbh1.jpg"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="myName">Teh Boon Hock</div>
+        </div>
+      </div>
+      <div class="slideFromBottom">
+        <div class="row">
+          <div class="col-sm-12 lead text-center">
+            <p>Hi! I am Teh Boon Hock from Selangor, Malaysia.<br>I am currently in second year of mechanical engineering in Taylor's University</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 lead text-center">
+            <p><b>IMPORTANT NOTE</b>. This website is <u><em>NOT</em></u> my e-portfolio or e-resume or anything like that. This website is for my learning purposes.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 lead text-center">
+            <p>This is version 2 of my website. In this version, I used more CSS to create animations rather than rely too much on JavaScript. Version 1 is my first ever website so it's all about making things work and trying out things.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/all_pages.js"></script>
+	</body>
+</html>

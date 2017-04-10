@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Primary School</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../CSS/main-css.css">
+		<style>
+			div[id^="menu"] p{
+				text-indent: 50px;
+			}
+		</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</head>
+	<body data-spy="scroll" data-target="#story-titles" data-offset="15">
+		<div class="container">
+			<a href="home.html"><img src="../images/fun-tehboonhock.png" class="center-block img-responsive" alt="logo"></a>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<nav data-spy="affix" class="navbar navbar-inverse col-xs-12" data-offset-top="197" >
+					<!-- story titles collapsed navbar -->
+					<div class="navbar-header">
+						<div class="dropdown pull-left navbar-toggle">
+							<button class="btn btn-default dropdown-toggle " type="button" data-toggle="dropdown">
+								Stories<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu story-titles-ul">
+							</ul>
+						</div>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span> 
+						</button>
+					</div>
+					<!-- end story titles collapsed navbar -->
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav" id="main-nav">
+							<li><a href="home.html"><span class="glyphicon glyphicon-home"></span></a></li>
+							<li><a href="primary-school.html">Primary school</a></li>
+							<li><a href="high-school.html">High school</a></li>
+							<li><a href="national-service.html">National Service</a></li>
+							<li><a href="form-6.html">Form 6</a></li>
+							<li><a href="breakout.html">Breakout</a></li>
+							<li><a href="photos.html">Photos</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="../main.html">Main page <span class="glyphicon glyphicon-log-out"></span></a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="container" style="margin-bottom:10px">
+			<div class="row">
+				<div class="col-xs-12">
+						<img class="img-responsive" src="../images/primary-school.png" alt="primary-school">
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<nav class="col-md-2 navbar" style="margin-bottom:20px;">
+					<div class="collapse navbar-collapse box-shadow" id="story-titles">
+						<ul class="nav navbar-nav nav-pills story-titles-ul"></ul>
+					</div>
+				</nav>
+				<div class="col-md-8" id="right-side">
+					<div class="row">
+						<div class="col-md-5 col-sm-4 col-xs-3"></div>
+						<figure class="col-md-3 col-sm-4 col-xs-6"><img id="section-pic" src="../images/tbh-primary.jpg" class="img-rounded center-block img-responsive" alt="Teh Boon Hock"></figure>
+					</div>
+					<div class="row">
+						<div class="col-xs-1"></div>
+						<div class="col-xs-10" style="height:100px;border: 1px solid #000000; overflow:auto; background-color:#ffc0cb; opacity:0.5">
+							<p id="change-style" style="width:90%" class="center-block">My parents always tell me that I was an extremely obedient child. I was very easy to be taken care of because wherever I go, I  would just sleep. But I grew up to be an extremely rebelious teenager though..</p>
+						</div>
+					</div>
+					<div class="row">
+						<form class="col-xs-12 form-horizontal" style="margin-top: 5px;">
+							<div class="form-group">
+								<label class="control-label col-sm-3 col-xs-5" for="input-font-style">Font Style:</label>
+								<select class="col-sm-2 col-xs-6" id="input-font-style">
+									<option selected>Cursive</option>
+									<option>Serif</option>
+									<option>Sans-serif</option>
+									<option>Monospace</option>
+									<option>Fantasy</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-3 col-xs-5" for="input-font-size">Font Size:</label>
+								<input class="col-sm-1 col-xs-3" id="input-font-size" type="number" min="1" max="10" step="1" value="5">
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-3 col-xs-5">Border radius:</label>
+								<div class="col-sm-7 col-xs-7" id="input-border-radius">
+									<label class="radio-inline"><input type="radio" name="border-radius" value="0px" checked>0 pixel</label>
+									<label class="radio-inline"><input type="radio" name="border-radius" value="20px">20 pixels</label>
+									<label class="radio-inline"><input type="radio" name="border-radius" value="40px">40 pixels</label>
+									<label class="radio-inline"><input type="radio" name="border-radius" value="60px">60 pixels</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<!-- input has to be in same line with label-->
+								<!-- for JavaScript .previousSibling to work properly-->
+								<label class="control-label col-sm-3 col-xs-5" for="input-bg-opacity">
+									Opacity: <span id="bg-opacity-value"></span>
+								</label>
+								<div class="col-sm-5 col-xs-6">
+									<input id="input-bg-opacity" type="range" min="0" max="1" step="0.1" value="0.5">
+								</div>
+							</div>
+							<div class="form-group">
+									<label class="control-label col-sm-3 col-xs-5" for="input-bg-color"> Background colour:</label>
+									<input id="input-bg-color" type="color" value="#ffc0cb">
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-3 col-xs-5" for="input-section-pic">Section photo:</label>
+								<input id="input-section-pic" class="col-sm-9 col-xs-7" type="file" accept="image/*">
+							</div>
+						</form>
+					</div>
+					<div id="menu0" class="row">
+						<div class="col-xs-12">
+							<h2>Stage Fright</h2>
+							<p>I used to have stage fright. Still, I always participate in my primary school's story telling competitions. I am not sure why. Maybe because I have a pair of <img src="../images/goldenballs.png" alt="golden-balls">. My parents did not force me, that's for sure.</p>
+							<p>Anyway, during one of the competitions when I was in Standard 5 or 6, I was selected as one of the winners. I knew this because I was at the backstage with one of my friends. I was so happy and I returned to my seat knowing that I "am" going to win despite my <del>usual</del> poor performance. Sadly, during the announcement of winnders, I was not the winner of third place. In fact, my friend who was at the backstage, told me that after I left, the teachers discussed and said my performance was not up to par and they "did the right thing".</p>
+						</div>
+					</div>
+					<div id="menu1" class="row">
+						<div class="col-xs-12">
+							<h2>Last Nightmare</h2>
+							<p>I had my last nightmare at the age of about 8 or 9 years old. I used to have a lot of nightmares. I got sick of it and every time I woke up, I told myself that it was all fake. No monsters exist!</p>
+							<p>So one day, I was having a nightmare again. I still remember the dream very clearly. I was running away from a bunch of monsters and suddenly, I "woke up". I knew it was all fake and I stopped running. I basically controlled my dream from that point onwards. No joke. I wanted the monsters to start running away from me and they did. I wanted a laser gun to shoot them and I did.</p>
+							<button class="btn btn-primary" id="ghost">Change content</button>
+						</div>
+					</div>
+					<div id="menu2" class="row">
+						<div class="col-xs-12">
+							<h2>Business</h2>
+							<p>Who would have guessed I was a good businessman when I was a kid? I <span class="lead">used to</span> love drawing. I loved it so much I started selling my drawings to my schoolmates. I drew Spiderman, PowerPuff Girls, Batman, Masked Riders, etc. in a book which I used as a catalogue. All the drawings are labelled with price ranging from 10 cents to 1 Ringgit. My schoolmates would choose the pictures that they want and pay me after I completed the drawing. I was earning good money man!</p>
+							<p>After some time, I started drawing comics. I first began with stickman drawings and eventually started drawing real comics but the layout was very bad.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="page-footer">
+			<div class="container-fluid text-center" style="margin-top: 10px">
+				<div class="row">
+					<div class="col-sm-5 date">Date started 18/11/2015</div>
+					<div class="col-sm-2"><b>tehboonhock.com</b></div>
+					<div class="col-sm-5 date">Date ended: 25/12/2015</div>
+				</div>
+			</div>
+		</footer>
+		<script src="../JS/primary-form.js"></script>
+		<script src="../JS/pages-start-up.js"></script>
+		<script>
+			document.getElementById('ghost').onclick = function(){
+				var audio = new Audio('../audio/Psycho%20Scream-SoundBible.com-1441943673.mp3');
+				audio.volume = 1;
+				audio.currentTime = 0.6;
+				audio.play();
+				document.write('<body style="background-image: url(../images/ghost.jpg); background-size: 100% 100%;"></body>');
+
+			};
+		</script>
+	</body>
+</html>

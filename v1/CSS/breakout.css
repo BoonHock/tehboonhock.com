@@ -1,0 +1,20 @@
+[id $= message]{
+	/* $= selects all elements with value of id attribute ending with 'message'*/
+	margin-top: 4%;
+}
+#breakout-canvas{
+	background-color: #FFFFFF;
+	padding: 0px;
+}
+#drawpad{
+	position: relative;
+	background-color: #FFFFFF;
+	padding: 0px;
+	margin: 0px;
+}
+#drawpad-tools{
+	position: absolute;
+	width: 110px;
+	right: 0px;
+	top: 0px;
+}

@@ -1,0 +1,26 @@
+#iw-right{
+	overflow: auto;
+}
+#iw-left img, #iw-right i{
+	display: block;
+}
+#iw-left img{
+	padding-right: 10px;
+}
+#iw-left, #iw-right{
+	max-height:120px;
+}
+#get-website::before{
+	content: 'http://www.skytrex-adventure.com/';
+}
+@media only screen and (max-width : 768px){
+	#iw-left img{
+		display: none;
+	}
+	#get-website::before{
+		content: 'Visit their website';
+	}
+	#iw-right{
+		clear: both;
+	}
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>High School</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../CSS/main-css.css">
+		<link rel="stylesheet" href="../CSS/info-window.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		<style>
+			@media only screen and (min-width : 768px){
+				#section-photo{
+					width: 20%;
+					-webkit-transition: width 1s;
+					transition: width 1s;
+					-webkit-transition-timing-function: ease-in;
+					transition-timing-function: ease-in;
+				}
+				#section-photo:hover{
+					width: 35%;
+					max-width: 500px;
+					max-height: 600px;
+				}
+			}
+			@media only screen and (max-width : 768px){
+				.large-img-vertical{
+					max-height: 350px;
+				}
+				#hover{
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<a href="home.html"><img src="../images/fun-tehboonhock.png" class="center-block img-responsive" alt="logo"></a>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<nav data-spy="affix" class="navbar navbar-inverse col-xs-12" data-offset-top="197" >
+					<!-- story titles collapsed navbar -->
+					<div class="navbar-header">
+						<div class="dropdown pull-left navbar-toggle">
+							<button class="btn btn-default dropdown-toggle " type="button" data-toggle="dropdown">
+								Stories<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu story-titles-ul"></ul>
+						</div>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span> 
+						</button>
+					</div>
+					<!-- end story titles collapsed navbar -->
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav" id="main-nav">
+							<li><a href="home.html"><span class="glyphicon glyphicon-home"></span></a></li>
+							<li><a href="primary-school.html">Primary school</a></li>
+							<li><a href="high-school.html">High school</a></li>
+							<li><a href="national-service.html">National Service</a></li>
+							<li><a href="form-6.html">Form 6</a></li>
+							<li><a href="breakout.html">Breakout</a></li>
+							<li><a href="photos.html">Photos</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="../main.html">Main page <span class="glyphicon glyphicon-log-out"></span></a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="container" style="margin-bottom:10px">
+			<div class="row">
+				<div class="col-md-12">
+					<img class="img-responsive" src="../images/high-school.png" alt="high-school">
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<nav class="col-md-2 navbar" style="margin-bottom:20px;">
+					<div class="collapse navbar-collapse box-shadow" id="story-titles">
+						<ul class="nav navbar-nav nav-pills story-titles-ul"></ul>
+					</div>
+				</nav>
+				<div class="col-md-8" id="right-side">
+					<div class="row">
+						<figure class="col-xs-12">
+							<img src="../images/tbh-high.jpg" class="img-rounded center-block" id="section-photo" alt="Teh Boon Hock">
+							<figcaption id="hover">Hover over to enlarge image</figcaption>
+						</figure>
+					</div>
+					<div id="menu0" class="row">
+						<div class="col-xs-12">
+							<h2>The Fight</h2>
+							<p>When I was in Form 2, I got into a fight with one of my classmates, Edmund. Well, that fight did not last long because I totally got trashed.<br><img src="../images/high-school-the-fight.jpg" alt="beaten-up" class="img-responsive center-block"><br>We got sent to the school counselor and she forced us to hug and apologize to each other. Well, guess what? We became best friends.</p>
+							<figure>
+								<img src="../images/high-school-the-fight2.jpg" class="img-responsive center-block" alt="revenge">
+								<figcaption>This is me, getting my revenge 3 years later.</figcaption>
+							</figure>
+						</div>
+					</div>
+					<div id="menu1" class="row">
+						<div class="col-xs-12">
+							<h2>Aeroplane King <span class="glyphicon glyphicon-plane"></span><span class="glyphicon glyphicon-plane"></span></h2>
+							<div class="row">
+								<div class="col-sm-3 col-xs-2"></div>
+								<figure class="col-sm-6 col-xs-8">
+									<img class="img-responsive center-block" src="../images/weng-soon.jpg" alt="weng-soon">
+								</figure>
+								<div class="col-sm-2"></div>
+							</div>
+							<p>This dude right here deserves an honorable mention.</p>
+							<table style="margin-left:auto;margin-right:auto;">
+								<tr><td>Weng Soon:</td><td><span class="glyphicon glyphicon-earphone"></span>"Halo? Tonight want go out or not?"</td></tr>
+								<tr><td>Me:</td><td><span class="glyphicon glyphicon-earphone"></span>"What time? 8pm? Can can."</td></tr>
+								<tr><td>Weng Soon:</td><td><span class="glyphicon glyphicon-earphone"></span>"On!"</td></tr>
+								<tr><td colspan="2"><span class="glyphicon glyphicon-time"></span> 1 second later...</td></tr>
+								<tr><td>Weng Soon:</td><td><span class="glyphicon glyphicon-earphone"></span>"Halo? I later got things to do. Cannot go out with you d."</td></tr>
+							</table>
+						</div>
+					</div>
+					<div id="menu2" class="row">
+						<div class="col-xs-12">
+							<h2>The Weird Monk</h2>
+							<p>I was a one of the good students in class when I was in Form 1 to 3 but it all changed when I entered Form 4. I started failing my subjects and all I cared about was to play basketball. I skipped classes with my friends and play basketball all they long. My school's discipline was bad so I had no issue skipping classes yet playing basketball in school during school time. But around July 2011, I woke up. I met a monk and I do not why but I started talking to him. I told him I want to achieve great things in life but studying is just not something that I enjoy doing. He then gave me a card.</p>
+							<div class="row">
+								<div class="col-sm-4"></div>
+								<figure class="col-sm-4">
+									<img class="img-responsive center-block large-img-vertical" src="../images/wu-di.jpg" alt="card">
+								</figure>
+								<div class="col-sm-4"></div>
+							</div>
+							<p>He then told me something like,</p>
+							<blockquote class="center-block">
+								<p>"You are like the Monkey King. Powerful yet foolish. You can do great things but you chose to do stupid things. You are unbeatable but you beat yourself."</p>
+								<footer>(translated) The Weird Monk</footer>
+							</blockquote>
+							<img src="../images/mit.png" class="img-responsive center-block" alt="MIT">
+							<p>I started studying really hard and set MIT as my goal. I eventually got 9As and 1B in my SPM.</p>
+						</div>
+					</div>
+					<div id="menu3" class="row">
+						<div class="col-xs-12">
+							<h2>Skytrex Adventure</h2>
+							<p>During Form 5, my elder brother introduced me to work part-time in Skytrex Adventure in Shah Alam as an instructor. So what's Skytrex Adventure?</p>
+							<blockquote class="center-block">
+								<p>Skytrex Adventure provides the first of its kind in Malaysia, a tree to tree  ‘sky-trekking’ experience where you can fly, swing, glide and dangle on the various aerial obstacles suspended above the lush tropical Malaysian Rainforest.
+		Take up the challenge and pump up the adrenaline on our many circuits at the various parks in which we are located and experience the best and most exciting forest adventure in Malaysia.</p>
+								<footer>http://www.skytrex-adventure.com/</footer>
+							</blockquote>
+							<p>Working in  Skytrex was an extremely great opportunity and it has given me tons of opportunity for self-development.</p>
+							<div id="skytrexMap" style="width:80%;height:400px" class="center-block"></div>
+							<p style="clear: both">To know more about Skytrex, just go the their <a href="http://www.skytrex-adventure.com/" target="_blank" data-toggle="tooltip" title="skytrex-adventure.com">website  <span class="glyphicon glyphicon-new-window"></span></a> or their <a target="_blank" href="https://www.facebook.com/skytrexadventure/" data-toggle="tooltip" title="facebook.com/skytrexadventure">Facebook page <span class="glyphicon glyphicon-new-window"></span></a>.</p>
+							<p>SkyTrex Calculator :</p>
+							<form class="form-horizontal">
+								<div class="row">
+									<div class="form-group col-xs-12 col-sm-6">
+										<label class="control-label col-xs-5 col-sm-4" for="circuit">Circuit: </label>
+										<select class="col-xs-7 col-sm-5" id="circuit">
+											<option>Little Adventure</option>
+											<option>Big Thrill</option>
+											<option>Extreme Challenge</option>
+										</select>
+									</div>
+									<div class="form-group col-xs-12 col-sm-6">
+										<label class="control-label col-xs-5 col-sm-5" for="amount-people">Amount of people: </label>
+											<input type="number" class="col-xs-7 col-sm-2" id="amount-people" value="0" min="0">
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-xs-12 col-sm-6">
+										<label class="control-label col-sm-5">Total Amount:</label>
+										<p class="form-control-static col-sm-7">MYR <span id="total-amount"></span></p>
+									</div>
+								</div>
+							</form>
+							<p>Note: You are entitled to 10% discount if you buy 10 tickets or more for the same circuit in a single transaction.</p>
+							<p>This calculation is correct as of 20/12/2015.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="page-footer">
+			<div class="container-fluid text-center" style="margin-top: 10px">
+				<div class="row">
+					<div class="col-sm-5 date">Date started 18/11/2015</div>
+					<div class="col-sm-2"><b>tehboonhock.com</b></div>
+					<div class="col-sm-5 date">Date ended: 25/12/2015</div>				 
+				</div>
+			</div>
+		</footer>
+		<script src="../JS/tooltip-enable.js"></script>
+		<script src="../JS/pages-start-up.js"></script>
+		<script src="../JS/google-map.js"></script>
+		<script>
+			// approximate coordinates of Skytrex Shah Alam
+			var myCenter = new google.maps.LatLng(3.095364, 101.511128);
+			var mapContent = '<div class="container-fluid"><div class="row"><div class="col-xs-4" id="iw-left"><img src="../images/skytrex-logo.png" class="img-responsive" alt="skytrex-logo"></div><div class="col-md-8" id="iw-right"><h4>Skytrex Shah Alam</h4><div class="row"><div class="col-xs-1"><i class="material-icons">place</i></div><p class="col-xs-11">Jalan Liku 8/1, Seksyen 8, 40000 Shah Alam, Selangor, Malaysia</p></div><div class="row"><div class="col-xs-1"><i class="material-icons">phone</i></div><p class="col-xs-11">&#43;601 3276 9841</p></div><div class="row"><div class="col-xs-1"><i class="material-icons">local_post_office</i></div><p class="col-xs-11">skytrex@skytrex-adventure.com</p></div><div class="row"><div class="col-xs-1"><i class="material-icons">public</i></div><a class="col-xs-11" id="get-website" href="http://www.skytrex-adventure.com/" target="_blank"></a></div><div class="row"><div class="col-xs-1"><i class="material-icons">directions</i></div><a class="col-xs-11" id="get-direction" onclick="getDirection()" target="_blank">Get direction (click to activate link)</a></div></div></div></div>';
+			var skytrexMap = initializeMap(myCenter, 16, 'skytrexMap', mapContent);
+			google.maps.event.addDomListener(window, 'load', skytrexMap);
+			// SkyTrex Calculation
+			function checkPrice(){
+				var circuit = $('#circuit').val();
+				var amountPeople = $('#amount-people').val();
+				var price = 0;
+				// calculate price
+				if(circuit === 'Little Adventure'){
+					price = amountPeople * 35;
+				}else if(circuit === 'Big Thrill'){
+					price = amountPeople * 45;
+				}else{
+					price = amountPeople * 55;
+				}
+				// offer discount if more than or equal to 10 people
+				if (amountPeople >= 10){price = price * 0.9;}
+				return price.toString();
+			};
+			$(document).ready(function(){
+				$('#circuit').change(function(){
+					$('#total-amount').text(checkPrice());
+				});
+				$('#amount-people').change(function(){
+					$('#total-amount').text(checkPrice());
+				});
+			});
+		</script>
+	</body>
+</html>

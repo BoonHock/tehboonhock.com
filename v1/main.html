@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Teh Boon Hock</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="CSS/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</head>
+	<body id="bodyDiv">
+		<div id="snail"></div>
+		<div class="container">
+			<div class="row" id="main-logo">
+				<img class="img-responsive center-block" src="images/fun-tehboonhock.png" alt="logo"><br>
+			</div>
+			<div class="row">
+				<img class="img-responsive center-block" src="images/keen-welcome.png" alt="welcome"><br>
+			</div>
+			<div class="row">
+				<form id="index-form" role="form" class="form-horizontal text-center center-block" style="overflow:hidden">
+					<p id="suggestion"></p>
+					<div class="form-group" id="username-div">
+            <div class="col-md-6">
+              <input class="form-control text-center" type="text" id="username" placeholder="Enter your name" autofocus><span></span><span class="help-block" style="height:30px"></span>
+            </div>
+            <div class="col-md-1">or</div>
+            <button type="button" id="generate-name" class="btn btn-default col-md-5 col-xs-12">Generate random name!</button>
+					</div>
+					<p><button type="button" class="btn btn-info" data-toggle="collapse" data-target="#name-purpose"><span>What is the name for?</span></button></p>
+					<p class="collapse" id="name-purpose">For fun</p>
+					<div class="form-group">
+						<button type="button" id="big-red-button" class="btn btn-danger">Enter</button>
+					</div>
+          <a href="../v2/home.html">Version 2 of this website is now available!</a>
+				</form>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container-fluid text-center" style="margin-top: 10px">
+				<div class="row">
+					<div class="col-sm-5 date">Date started 18/11/2015</div>
+					<div class="col-sm-2"><a data-toggle="modal" href="#modal-info" data-keyboard="true"><b>About this website</b></a></div>
+					<div class="col-sm-5 date">Date ended: 25/12/2015</div>
+				</div>
+			</div>
+		</footer>
+		<div class="modal fade" id="modal-info" role="dialog" style="margin-top:10%" tabindex="-1">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content" style="border-radius:1em">
+					<div class="modal-header" style="background-color: #ebe0ae; border-radius:1em 1em 0 0">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h3 class="modal-title">About this website</h3>
+					</div>
+					<div class="modal-body">
+						<ul>
+							<li>it is a learning project</li>
+							<li>relies heavily on JavaScript (about 5066.176 &plusmn; 0.001 kg)</li>
+							<li><u><b>NO</b></u> user information is stored in database. <del>Your underwear colour will remain unknown</del></li>
+							<li><u><b>NO</b></u> cookies (and milk) used</li>
+						</ul>
+					</div>
+					<div class="modal-footer" style="background-color: #ebe0ae; border-radius: 0 0 1em 1em">
+						<p>This website relies heavily on JavaScript  because I was having a lot of trouble with it and I want to take this opportunity to strengthen my knowledge of it.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="JS/index-form.js"></script>
+		<script src="js/tooltip-enable.js"></script>
+	</body>
+</html>

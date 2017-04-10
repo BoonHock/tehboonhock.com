@@ -1,0 +1,98 @@
+body{
+	position: relative;
+	background-color: #b0f4c0;
+/*  margin-bottom: 60px;*/
+	font-family: cursive;
+	padding-bottom: 10px;
+}
+.page-footer{
+	position: absolute;
+	bottom: -60px;
+	height: 60px;
+	width: 100%;
+	padding: 5px;
+	overflow: hidden;
+	color: #ffffff;
+	background-image: url(../images/background-image/Elegant_Background-8.jpg);
+	background-size: cover;
+}
+.box-shadow{
+	box-shadow: 10px 10px 20px #808080;
+}
+#my-stories{
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+#story-titles{
+	background-image: url(../images/background-image/upfeathers.png);
+	border-radius: 40px;
+	font-size: 1.2em;
+}
+#story-titles li a:hover{
+	font-weight: 900;
+	background-color: transparent;
+}
+.navbar {
+	margin-bottom: 20px;
+}
+.affix.navbar {
+	top:0;
+	width: 100%;
+	z-index: 9999 !important;
+}
+.affix.navbar ~ .container-fluid {
+	position: relative;
+	top: 50px;
+}
+#right-side h2{
+	color: red;
+	margin-top: 60px;
+}
+/*
+.large-img-vertical{
+	max-width: 300px;
+	max-height: 450px;
+}
+.large-img{
+	max-width: 500px;
+	max-height: 600px;
+}
+*/
+blockquote{
+	width: 60%;
+	border:0 !important;
+	background-color: #c9ddac;
+	border-radius: 20px;
+	margin-left: 2%;
+}
+figcaption{
+	text-align: center;
+}
+.deactivate{
+	color: #808080;
+	cursor: not-allowed;
+}
+.deactivate:hover{
+	text-decoration: none;
+}
+.popovers:hover{
+	cursor: pointer;
+}
+/*
+Go to the link below to check for viewport width under "Responsive Utilities"
+***http://www.w3schools.com/bootstrap/bootstrap_ref_css_helpers.asp
+*/
+@media only screen and (max-width : 768px) {
+	#right-side h2{
+		margin-top: 80px !important;
+	}
+	.page-footer .date{
+		display: none;
+	}
+}
+@media only screen and (min-width : 992px) {
+	#story-titles li{
+		clear: both;
+	}
+}
